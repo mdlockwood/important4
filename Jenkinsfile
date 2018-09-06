@@ -19,5 +19,11 @@ pipeline {
         sleep 10
       }
     }
+    stage('End') {
+      steps {
+        echo 'Hello End'
+        sleep 10
+      }
+    }
   }
 }
