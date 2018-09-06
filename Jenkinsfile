@@ -14,13 +14,7 @@ pipeline {
       }
     }
     stage('Deploy') {
-      post {
-        always {
-          junit 'test.xml'
 
-        }
-
-      }
       steps {
         input(message: 'Release to Production', id: 'myid', ok: 'Ok', submitter: 'mdlockwood')
         echo 'Hello Deploy'
