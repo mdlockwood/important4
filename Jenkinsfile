@@ -14,11 +14,14 @@ pipeline {
       }
     }
     stage('Deploy') {
-
       steps {
         input(message: 'Release to Production', id: 'myid', ok: 'Ok', submitter: 'mdlockwood')
         echo 'Hello Deploy'
         sleep 10
+        sh '''echo a
+echo b
+echo c
+'''
       }
     }
     stage('End') {
