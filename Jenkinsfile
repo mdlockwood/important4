@@ -28,11 +28,11 @@ echo \'</testsuite>\' >> test.xml
 
 cat test.xml'''
       }
-    }
     post {
      always {
       junit 'test.xml'
       }
+    }
     }
     stage('End') {
       steps {
