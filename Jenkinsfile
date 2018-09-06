@@ -25,7 +25,7 @@ pipeline {
         input(message: 'Release to Production', id: 'myid', ok: 'Ok', submitter: 'mdlockwood')
         echo 'Hello Deploy'
         sleep 10
-        sh '''echo \'<testsuite tests="3">\' > test.xml
+        sh echo \'<testsuite tests="3">\' > test.xml
 echo \'<testcase classname="DeployWebServer" name="DeployWebServer"/>\' >> test.xml
 echo \'<testcase classname="DeployDatabase" name="DeployDatabase"/>\' >> test.xml
 echo \' <testcase classname="StartServices" name="StartServices">\' >> test.xml
