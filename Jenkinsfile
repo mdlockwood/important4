@@ -40,7 +40,7 @@ echo \'<testcase classname="DeployWebServer" name="InstallWebSphere"/>\' >> test
 echo \'<testcase classname="DeployDatabase" name="CreateSchema"/>\' >> test2.xml
 echo \'<testcase classname="DeployDatabase" name="SecureTableSpaces"/>\' >> test2.xml
 echo \' <testcase classname="StartServices" name="StartServices">\' >> test2.xml
-echo \'<failure type="Service Failed to start cuz it does not want to"> The service is being stubborn </failure>\' >> test2.xml
+echo \'<failure type="Service Failed to start cuz it does not want to"> The service is being REALLY stubborn </failure>\' >> test2.xml
 echo \'</testcase>\' >> test2.xml
 echo \'</testsuite>\' >> test2.xml
 '''
