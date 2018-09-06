@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        input(message: 'I need INPUT', id: 'myid', ok: 'Ok', submitter: 'mdlockwood')
+        input(message: 'Release to Production', id: 'myid', ok: 'Ok', submitter: 'mdlockwood')
         echo 'Hello Deploy'
         sleep 10
       }
