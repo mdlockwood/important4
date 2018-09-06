@@ -19,13 +19,6 @@ pipeline {
         input(message: 'Release to Production', id: 'myid', ok: 'Ok', submitter: 'mdlockwood')
         echo 'Hello Deploy'
         sleep 10
-        sh '''echo \'<testsuite tests="3">\' > test.xml
-echo \'<testcase classname="DeployWebServer" name="DeployWebServer"/>\' >> test.xml
-echo \'<testcase classname="DeployDatabase" name="DeployDatabase"/>\' >> test.xml
-echo \' <testcase classname="StartServices" name="StartServices">\' >> test.xml
-echo \'<failure type="Service Failed to start cuz it does not want to"> The service is being stubborn </failure>\' >> test.xml
-echo \'</testcase>\' >> test.xml
-echo \'</testsuite>\' >> test.xml
       }
     }
     stage('End') {
