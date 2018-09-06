@@ -10,13 +10,13 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Hello Test'
-        echo 'Hello Tets'
+        echo 'Hello Test'
       }
     }
     stage('Deploy') {
       post {
         always {
-          junit 'test.xml'
+          junit '*.xml'
 
         }
 
@@ -38,10 +38,8 @@ echo \'<testcase classname="DeployWebServer" name="DeployWebServer"/>\' >> test2
 echo \'<testcase classname="DeployDatabase" name="DeployDatabase"/>\' >> test2.xml
 echo \' <testcase classname="StartServices" name="StartServices">\' >> test2.xml
 echo \'<failure type="Service Failed to start cuz it does not want to"> The service is being stubborn </failure>\' >> test2.xml
-echo \'</testcase>\' >> test2xml
-echo \'</testsuite>\' >> test2xml
-
-cat test.xml'''
+echo \'</testcase>\' >> test2.xml
+echo \'</testsuite>\' >> test2.xml
       }
     }
     stage('End') {
