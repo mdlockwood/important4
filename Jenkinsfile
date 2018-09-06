@@ -16,7 +16,8 @@ pipeline {
     stage('Deploy') {
       post {
         always {
-          junit '*.xml'
+          junit 'test.xml'
+          junit 'test2.xml'
 
         }
 
