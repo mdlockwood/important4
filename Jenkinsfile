@@ -18,7 +18,7 @@ pipeline {
         always {
           junit 'test.xml'
           junit 'test2.xml'
-	  junit 'test3.xml'
+          junit 'test3.xml'
 
         }
 
@@ -55,6 +55,7 @@ echo \'<failure type="General Failure"> Please fix this junk</failure>\' >> test
 echo \'</testcase>\' >> test3.xml
 echo \'</testsuite>\' >> test3.xml
 '''
+        echo 'Very important step'
       }
     }
     stage('End') {
