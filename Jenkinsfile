@@ -34,9 +34,11 @@ echo \'<failure type="Service Failed to start cuz it does not want to"> The serv
 echo \'</testcase>\' >> test.xml
 echo \'</testsuite>\' >> test.xml
 
-echo \'<testsuite tests="3">\' > test2.xml
-echo \'<testcase classname="DeployWebServer" name="DeployWebServer"/>\' >> test2.xml
-echo \'<testcase classname="DeployDatabase" name="DeployDatabase"/>\' >> test2.xml
+echo \'<testsuite tests="5">\' > test2.xml
+echo \'<testcase classname="DeployWebServer" name="CopyWebsphereSource"/>\' >> test2.xml
+echo \'<testcase classname="DeployWebServer" name="InstallWebSphere"/>\' >> test2.xml
+echo \'<testcase classname="DeployDatabase" name="CreateSchema"/>\' >> test2.xml
+echo \'<testcase classname="DeployDatabase" name="SecureTableSpaces"/>\' >> test2.xml
 echo \' <testcase classname="StartServices" name="StartServices">\' >> test2.xml
 echo \'<failure type="Service Failed to start cuz it does not want to"> The service is being stubborn </failure>\' >> test2.xml
 echo \'</testcase>\' >> test2.xml
