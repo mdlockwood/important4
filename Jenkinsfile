@@ -18,6 +18,7 @@ pipeline {
         always {
           junit 'test.xml'
           junit 'test2.xml'
+	  junit 'test3.xml'
 
         }
 
